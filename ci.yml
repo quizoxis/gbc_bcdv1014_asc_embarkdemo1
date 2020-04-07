@@ -1,0 +1,11 @@
+name: Survey Marketplace Install, Test and Build
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  install:
+    run-on: ubuntu-latest
+    
