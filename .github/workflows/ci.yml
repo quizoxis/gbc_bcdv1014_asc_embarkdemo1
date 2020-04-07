@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - master
-      
+
   push_request:
     branches:
       - master
@@ -12,7 +12,7 @@ on:
 
 jobs:
   install:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [10.17.0]
