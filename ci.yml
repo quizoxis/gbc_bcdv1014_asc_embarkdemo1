@@ -8,4 +8,18 @@ on:
 jobs:
   install:
     run-on: ubuntu-latest
-    
+    strategy:
+      matrix:
+        node-version: [10.17.0]
+
+    steps:
+      - name: Checkout Use Node.js ${{ matrix.node-version}}
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      -name: Install
+       run: |
+        yarn install
+      -name: Test
+       run: |
+        yarn test
